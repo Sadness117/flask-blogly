@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Edit this user</h2>
+
+<form action = '/commit_changes/{{current_user.id}}' method = 'POST'>
+    <ul>First name <input type = 'text' name = first></ul>
+    <ul>Last name<input type = 'text' name = last></ul>
+    <ul>Image url<input type = 'text' name = img_url></ul>
+<button>Save</button>
+</form>
+<form action = '/{{current_user.id}}'>
+    <button>Cancel</button>
+</form>
+
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<h1>Users</h1>
+{% for user in person %}
+    <li><a href ="/{{user.id}}">{{user.name()}}</a></li>
+{% endfor %}
+<form action = '/add_user_page'>
+
+<button>Add user</button>
+
+
+</form>
+
+{% endblock %}
